@@ -1,0 +1,97 @@
+//***************//
+//**** FORMS ****//
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.form {
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
+
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 51px; // accommodate the navbar
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
+  }
+
+// Styles for form views
+// using Bootstrap
+.authform {
+  padding-top: 30px;
+  max-width: 350px;
+  margin: auto auto;
+}
+.authform form {
+  @extend .well;
+  @extend .well-lg;
+  padding-bottom: 40px;
+  height: auto;
+
+}
+.authform .button {
+  @extend .btn;
+  @extend .btn-primary;
+}
+.authform fieldset {
+  @extend .well;
+}
+#error_explanation:not(:empty) {
+  @extend .alert;
+  @extend .alert-danger;
+}
+#error_explanation h2 {
+  font-size: 16px;
+}
+.button-xs {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-sm;
+}
+
+
+// Form Edit form views
+// using Bootstrap
+.editform {
+  @extend .well;
+  padding-top: 30px;
+  max-width: 480px;
+  margin: auto auto;
+}
+.editform form {
+  padding: 40px;
+  height: auto;
+}
+.editform .button {
+  @extend .btn;
+  @extend .btn-primary;
+}
+.editform fieldset {
+  @extend .well;
+}
+.editform h3,.editform p,.editform h2 {
+  padding-left: 40px;
+}
+.editform p {
+  margin-bottom: -15px;
+}
+.editform .button {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
