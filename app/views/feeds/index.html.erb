@@ -1,33 +1,24 @@
 <div class="page-header">
-  <%= link_to new_feed_path, class: 'btn btn-primary' do %>
+  <%= link_to edit_user_registration_path(current_user), class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-plus"></span>
-    New Feed
+    Add Sources
   <% end %>
-  <h1>Listing feeds</h1>
+  <h1>My News Feeds</h1>
 </div>
 
 <div class="table-responsive">
-  <table class="table table-striped table-bordered table-hover">
+  <table class="table table-hover">
     <thead>
       <tr>
-            <th>Title</th>
-            <th>Feed url</th>
-            <th>Favicon url</th>
-            <th></th>
-        <th></th>
-        <th></th>
+        <th>Source Name</th>
       </tr>
     </thead>
 
     <tbody>
       <%= content_tag_for(:tr, @feeds) do |feed| %>
-            <td><%= feed.title %></td>
-            <td><%= feed.feed_url %></td>
-            <td><%= feed.favicon_url %></td>
-            <td><%= link_to 'Show', feed %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to feed.title, feed %></td>
       <% end %>
     </tbody>
   </table>
 </div>
+

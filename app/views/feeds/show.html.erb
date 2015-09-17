@@ -3,21 +3,16 @@
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
   <% end %>
-  <%= link_to edit_feed_path(@feed), class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-pencil"></span>
-    Edit
-  <% end %>
   <h1>Show feed</h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt>Title:</dt>
-  <dd><%= @feed.title %></dd>
+<div class="container">
 
-  <dt>Feed url:</dt>
-  <dd><%= @feed.feed_url %></dd>
+<% @feed.each do |f| %>
+   <h3><%= link_to f.title, f.url %></h3>
+   <p><%= f.image %></p>
+   <p><%= f.published %></p>
+   <p><%= f.summary %></p>
+<% end %>
 
-  <dt>Favicon url:</dt>
-  <dd><%= @feed.favicon_url %></dd>
-
-</dl>
+</div>
