@@ -3,16 +3,18 @@
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
   <% end %>
-  <h1>Show feed</h1>
+  <h1>Current Events</h1>
 </div>
 
-<div class="container">
-
-<% @feed.each do |f| %>
-   <h3><%= link_to f.title, f.url %></h3>
-   <p><%= f.image %></p>
-   <p><%= f.published %></p>
-   <p><%= f.summary %></p>
-<% end %>
-
+<div class="container-fluid">
+  <div class="row">
+    <% @feed.each do |f| %>
+       <div class="col-md-4">
+         <h3><%= link_to f.title, f.url %></h3>
+         <p><%= f.image %></p>
+         <p><%= f.published %></p>
+         <p><%= f.content.html_safe %></p>
+       </div>
+    <% end %>
+  </div>
 </div>

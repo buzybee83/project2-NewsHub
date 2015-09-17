@@ -11,6 +11,10 @@ class FeedsController < ApplicationController
   # GET /feeds/1
   # GET /feeds/1.json
   def show
+    # @user = User.find(params[:id])
+    # unless @user == current_user
+    #   redirect_to user_path(current_user), :alert => "Access denied."
+    # end
     @feed = Feed.get_feed
   end
 

@@ -3,6 +3,14 @@
   <h2>Sign up</h2>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
+    <h3>Select your Sources</h3>
+    <ul class="list-group">
+      <%= f.collection_check_boxes(:feed_ids, @all_feeds, :id, :feed_name) do |b| %>
+        <li class="list-group-item">
+          <%= b.label("data-value": b.value) { b.check_box + '  ' + b.text } %>
+        </li>
+      <% end %>
+   </ul>
 
     <div class="form-group">
       <%= f.label :first_name %>
