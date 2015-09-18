@@ -1,20 +1,23 @@
 <div class="page-header">
   <%= link_to feeds_path, class: 'btn btn-default' do %>
-    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="glyphicon glyphicon-chevron-left"></span>
     Back
   <% end %>
   <h1>Current Events</h1>
 </div>
-
 <div class="grid">
-<% feed_title.each do |f| %>
-  <div class="grid-sizer"></div>
+  <% feed_title.each do |f| %>
     <div class="grid-item">
       <h3><%= f.title %></h3>
       <p><%= f.published %></p>
       <p><%= image_tag f.content.split[2].split('"')[1], width: "360px", height: "270px" %></p>
-      <p><%= f.content.gsub(/<img .*?>/, '').gsub("Continue reading", '').gsub(/&hellip;/, '').html_safe %>
+      <p><%= f.content.gsub(/<img .*?>/, '').gsub("Continue reading", '').gsub(/&hellip;/, '').gsub(/<a style=.*?>/, '').html_safe %>
       <%= link_to "Read More", f.url, class: 'btn btn-primary' %></p>
     </div>
-  </div>
+    <% end %>
+</div>
+
+<%= link_to feeds_path, class: 'btn btn-default' do %>
+  <span class="glyphicon glyphicon-chevron-left"></span>
+  Back
 <% end %>

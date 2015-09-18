@@ -6,37 +6,24 @@
 }
 /********************/
 /***** Articles *****/
-.item h3 {
+
+.grid-item h3 {
   color: #DF691A;
+  padding: 15px;
 }
 
 a:hover {
 color:  lighten($brand-primary, 20%)
 }
 
-.item {
-  width: 370px;
-  margin: 5px;
-  float: left;
-  display: inline;
-  background: rgba(225,225,225,0.7);
+.btn-primary, .btn-default {
   border-radius: 5px;
-  padding: 5px;
 }
-
-.item:after {
-  content: '';
-  clear: both;
-}
-
 /*******************/
 /*** Grid System ***/
-.grid {
-
-}
-.grid-sizer,
-.grid-item {
-  width: 32.8%;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .grid-item {
@@ -47,22 +34,22 @@ color:  lighten($brand-primary, 20%)
   padding: 5px;
   margin: auto 3px 3px;
   height: auto;
-
+  width: 32.8%;
 }
 
 .grid-item img {
-  display: block;
   max-width: 100%;
   background: rgb(225,225,225);
   border-radius: 5px;
   border: 3px solid;
-  margin: 5px;
+  margin: 2px;
 }
 
-/* clearfix */
+/* clear fix */
 .grid:after {
   content: '';
   clear: both;
+  display: block;
 }
 
 
@@ -93,10 +80,10 @@ main {
   width: 100%;
   margin-top: 51px; // accommodate the navbar
   }
-section {
-  @extend .row;
-  margin-top: 20px;
-  }
+
+.jumbotron {
+  background-color: lighten($jumbotron-bg, 5%)
+}
 
 // Styles for form views
 // using Bootstrap
@@ -110,6 +97,7 @@ section {
   @extend .well-lg;
   padding-bottom: 40px;
   height: auto;
+  border-radius: 5px;
 
 }
 .authform .button {
@@ -144,6 +132,7 @@ section {
 .editform form {
   padding: 40px;
   height: auto;
+  border-radius: 5px;
 }
 .editform .button {
   @extend .btn;

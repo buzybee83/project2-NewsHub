@@ -10,6 +10,7 @@
 
 body {
   padding-top: $navbar-height + 10px;
+  background-image: url("white_speckled_body.jpg");
 }
 
 .page-header {
@@ -33,4 +34,6 @@ main {
   margin: 20px auto;
   max-width: 1800px;
 }
-
+.main-container {
+background-image: url(../images/white_speckled_body.jpg);
+}

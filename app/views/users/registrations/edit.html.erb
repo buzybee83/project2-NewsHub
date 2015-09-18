@@ -8,7 +8,7 @@
     <ul class="list-group">
       <%= f.collection_check_boxes(:feed_ids, @all_feeds, :id, :feed_name) do |b| %>
         <li class="list-group-item">
-          <%= b.label("data-value": b.value) { b.check_box + '  ' + b.text } %>
+          <%= b.label(:"data-value" => b.value) { b.check_box + '  ' + b.text } %>
         </li>
       <% end %>
    </ul>
