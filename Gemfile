@@ -17,7 +17,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-generators', '~> 3.3.4'
 
 # Grid masonry system
-gem 'masonry-rails', '~> 0.2.4'
+gem 'jquery-masonry-rails'
 
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -46,6 +46,9 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Better Rails Error Pages
+gem 'better_errors'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -58,8 +61,5 @@ group :development, :test do
 
   # Use pry with Rails console
   gem 'pry-rails'
-
-  # Better Rails Error Pages
-  gem 'better_errors'
 end
 

@@ -11,7 +11,7 @@
     <div class="item">
       <h3><%= f.title %></h3>
       <p><%= f.published %></p>
-      <p><%= image_tag f.content.split[2].split('"')[1], size: "340x280"%></p>
+      <p><%= image_tag f.content.split[2].split('"')[1], width: "360px", height: "270px" %></p>
       <p><%= f.content.gsub(/<img .*?>/, '').gsub("Continue reading", '').gsub(/&hellip;/, '').html_safe %>
       <%= link_to "Read More", f.url, class: 'btn btn-primary' %></p>
     </div>
