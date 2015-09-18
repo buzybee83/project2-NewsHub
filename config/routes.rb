@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "users/registrations" }
-  resources :users
+  resources :users, only:[:show, :registrations]
   resources :feeds
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about', via: 'get'
