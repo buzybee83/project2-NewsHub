@@ -4,9 +4,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_filter :set_all_feeds, only: [:new, :create, :edit, :update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    super
+  end
 
   # POST /resource
   # def create
