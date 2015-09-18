@@ -25,16 +25,12 @@ body {
 input[type="radio"], input[type="checkbox"] {
   width: initial;
   height: initial;
-  margin-top: 7px;
+  margin-top: 5px;
+  margin-right: 2px;
 }
 
 main {
   margin: 20px auto;
-  width: 800px;
+  max-width: 1800px;
 }
 
-.todos {
-  th, td {
-    text-align:center
-  }
-}

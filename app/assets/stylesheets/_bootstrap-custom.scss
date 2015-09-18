@@ -1,3 +1,42 @@
+/********************/
+/** Table styling **/
+.table {
+  max-width: 400px;
+  font-size: 1.2em;
+}
+/********************/
+/***** Articles *****/
+.grid-item h3 {
+  color: #DF691A;
+}
+
+a:hover {
+color:  lighten($brand-primary, 20%)
+}
+
+.item {
+  width: 370px;
+  margin: 5px;
+  float: left;
+  display: inline;
+  background: rgba(225,225,225,0.7);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.item:after {
+  content: '';
+  clear: both;
+}
+
+
+/* clearfix */
+.grid:after {
+  content: '';
+  clear: both;
+}
+
+
 //***************//
 //**** FORMS ****//
 .column {
@@ -93,5 +132,9 @@ section {
 .editform .button {
   @extend .btn;
   @extend .btn-primary;
+  border-radius: 5px;
 }
 
+.button {
+  @extend .btn-primary;
+}

@@ -7,11 +7,13 @@
 </div>
 
 <% feed_title.each do |f| %>
-  <div class="col-xs-6 col-md-4 clear">
-    <h3><%= f.title %></h3>
-    <p><%= f.published %></p>
-    <p><%= image_tag f.content.split[2].split('"')[1], size: "340x280"%></p>
-    <p><%= f.content.gsub(/<img .*?>/, '').gsub("Continue reading", '').gsub(/&hellip;/, '').html_safe %>
-    <%= link_to "Read More", f.url, class: 'btn btn-primary' %></p>
+  <div class="grid">
+    <div class="item">
+      <h3><%= f.title %></h3>
+      <p><%= f.published %></p>
+      <p><%= image_tag f.content.split[2].split('"')[1], size: "340x280"%></p>
+      <p><%= f.content.gsub(/<img .*?>/, '').gsub("Continue reading", '').gsub(/&hellip;/, '').html_safe %>
+      <%= link_to "Read More", f.url, class: 'btn btn-primary' %></p>
+    </div>
   </div>
 <% end %>

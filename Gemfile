@@ -16,6 +16,9 @@ gem 'sass-rails', '~> 5.0'
 # Bootstrap friendly
 gem 'bootstrap-generators', '~> 3.3.4'
 
+# Grid masonry system
+gem 'masonry-rails', '~> 0.2.4'
+
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'

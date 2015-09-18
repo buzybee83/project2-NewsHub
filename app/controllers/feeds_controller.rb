@@ -12,7 +12,6 @@ class FeedsController < ApplicationController
   # GET /feeds/1
   # GET /feeds/1.json
   def show
-    @feeds = Feed.find(params[:id])
   end
 
   # GET /feeds/new
