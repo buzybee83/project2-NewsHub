@@ -9,7 +9,7 @@ class Feed < ActiveRecord::Base
   def self.get_feed
     the_verge = "http://www.theverge.com/rss/index.xml"
     feed = Feedjira::Feed.fetch_and_parse the_verge
-    @feed =  feed.entries
+    @feed = feed.entries
   end
 
   def feed_name

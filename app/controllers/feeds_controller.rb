@@ -1,4 +1,5 @@
 class FeedsController < ApplicationController
+  # before_action :verify_correct_user
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
 
   # GET /feeds
@@ -11,11 +12,7 @@ class FeedsController < ApplicationController
   # GET /feeds/1
   # GET /feeds/1.json
   def show
-    # @user = User.find(params[:id])
-    # unless @user == current_user
-    #   redirect_to user_path(current_user), :alert => "Access denied."
-    # end
-    @feed = Feed.get_feed
+    @feeds = Feed.find(params[:id])
   end
 
   # GET /feeds/new
@@ -78,4 +75,8 @@ class FeedsController < ApplicationController
       params.require(:feed).permit(:title, :feed_url, :favicon_url)
     end
 
+    # def verify_correct_user
+    #   @feed = current_user.feeds.find_by(user_id: params[:id])
+    #   redirect_to feeds_path if @feed.nil?
+    # end
 end
