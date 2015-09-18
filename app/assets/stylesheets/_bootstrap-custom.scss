@@ -29,6 +29,35 @@ color:  lighten($brand-primary, 20%)
   clear: both;
 }
 
+/*******************/
+/*** Grid System ***/
+.grid {
+
+}
+.grid-sizer,
+.grid-item {
+  width: 32.8%;
+}
+
+.grid-item {
+  float: left;
+  display: inline;
+  background: rgba(225,225,225,0.7);
+  border-radius: 5px;
+  padding: 5px;
+  margin: auto 3px 3px;
+  height: auto;
+
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+  background: rgb(225,225,225);
+  border-radius: 5px;
+  border: 3px solid;
+  margin: 5px;
+}
 
 /* clearfix */
 .grid:after {
