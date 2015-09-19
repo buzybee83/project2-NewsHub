@@ -4,36 +4,3 @@
 @import "bootstrap-sprockets.scss";
 @import "bootstrap.scss";
 @import "bootstrap-custom.scss";
-
-
-
-
-body {
-  padding-top: $navbar-height + 10px;
-  background-image: url("white_speckled_body.jpg");
-}
-
-.page-header {
-  a.btn {
-    float: right;
-  }
-
-  a.btn + a.btn {
-    margin-right: 8px;
-  }
-}
-
-input[type="radio"], input[type="checkbox"] {
-  width: initial;
-  height: initial;
-  margin-top: 5px;
-  margin-right: 2px;
-}
-
-main {
-  margin: 20px auto;
-  max-width: 1800px;
-}
-.main-container {
-  text: #424242;
-}

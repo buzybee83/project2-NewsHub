@@ -5,11 +5,6 @@
   max-width: 400px;
   font-size: 1.2em;
 }
-
-.table a:hover {
-  color: #e6673e;
-}
-
 .table a:hover {
   color: #e6673e;
   text-decoration: none;
@@ -66,14 +61,46 @@ color:  darken($brand-primary, 20%)
   display: block;
 }
 
-// apply styles to HTML elements
-// to make views framework-neutral
+/************************/
+/***** Main Content *****/
+html, body {
+  height: 100%;
+}
+body {
+  padding-top: $navbar-height + 10px;
+  background-image: url("white_speckled_body.jpg");
+  background-size: 100%;
+}
+.page-header {
+  a.btn {
+    float: right;
+  }
+
+  a.btn + a.btn {
+    margin-right: 8px;
+  }
+}
+input[type="radio"], input[type="checkbox"] {
+  width: initial;
+  height: initial;
+  margin-top: 5px;
+  margin-right: 2px;
+}
+.main-container {
+  text: #424242;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -63px;
+}
 main {
   @extend .container;
-  padding-bottom: 80px;
-  width: 100%;
   margin-top: 51px; // accommodate the navbar
   display: block;
+  max-width: 1800px;
+  margin-bottom: 0;
 }
 
 .jumbotron {
@@ -83,6 +110,7 @@ main {
 
 .btn-section {
   padding: 50px 0;
+  margin-bottom: 30px;
 }
 
 .navbar-default {
@@ -99,16 +127,18 @@ main {
 .navbar-nav > li {
   color: white;
 }
-
+ /**********************/
+ /****** FOOTER ********/
 .footer-area {
-  height: 100px;
+    height: 100px;
+}
+.footer-area {
   text-align: center;
   padding-top: 50px;
-  margin: 0;
+  margin-bottom: 0;
   width: 100%;
   background-color: #e6673e;
-  vertical-align: baseline;
-}
+ }
 
 //***************//
 //**** FORMS ****//
@@ -158,12 +188,6 @@ main {
 #error_explanation h2 {
   font-size: 16px;
 }
-.button-xs {
-  @extend .btn;
-  @extend .btn-primary;
-  @extend .btn-sm;
-  border-radius: 5px;
-}
 
 // Form Edit form views
 // using Bootstrap
@@ -193,7 +217,17 @@ main {
 .editform p {
   margin-bottom: -15px;
 }
-
 .button {
   @extend .btn-primary;
 }
+
+
+/**************************/
+/****** Resposive *********/
+// @media and screen-size
+// .button-xs {
+//   @extend .btn;
+//   @extend .btn-primary;
+//   @extend .btn-sm;
+//   border-radius: 5px;
+// }
