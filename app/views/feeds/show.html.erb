@@ -7,7 +7,7 @@
 </div>
 <div class="grid">
   <% feed_title.each do |f| %>
-    <div class="grid-item">
+    <div class="grid-item box-content">
       <h3><%= f.title %></h3>
       <p><%= f.published %></p>
       <p><%= image_tag f.content.split[2].split('"')[1], width: "360px", height: "270px" %></p>
@@ -16,8 +16,9 @@
     </div>
     <% end %>
 </div>
-
+<div class="btn-section">
 <%= link_to feeds_path, class: 'btn btn-default' do %>
   <span class="glyphicon glyphicon-chevron-left"></span>
   Back
 <% end %>
+</div>

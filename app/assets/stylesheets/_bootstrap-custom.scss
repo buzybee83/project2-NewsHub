@@ -1,24 +1,35 @@
 /********************/
-/** Table styling **/
+/**
+ styling **/
 .table {
   max-width: 400px;
   font-size: 1.2em;
 }
+
+.table a:hover {
+  color: #e6673e;
+}
+
+.table a:hover {
+  color: #e6673e;
+  text-decoration: none;
+}
+
 /********************/
 /***** Articles *****/
 
 .grid-item h3 {
-  color: #DF691A;
-  padding: 15px;
+  color: #e6673e;
 }
 
 a:hover {
-color:  lighten($brand-primary, 20%)
+color:  darken($brand-primary, 20%)
 }
 
 .btn-primary, .btn-default {
   border-radius: 5px;
 }
+
 /*******************/
 /*** Grid System ***/
 * {
@@ -29,29 +40,75 @@ color:  lighten($brand-primary, 20%)
 .grid-item {
   float: left;
   display: inline;
-  background: rgba(225,225,225,0.7);
-  border-radius: 5px;
-  padding: 5px;
-  margin: auto 3px 3px;
+  margin: auto 3px 4px 0;
   height: auto;
   width: 32.8%;
 }
 
-.grid-item img {
-  max-width: 100%;
-  background: rgb(225,225,225);
+.box-content {
+  padding: 0 20px 10px 20px;
+  background: rgba(225,225,225,0.5);
   border-radius: 5px;
-  border: 3px solid;
-  margin: 2px;
+  border: 1px lightgray solid;
 }
 
-/* clear fix */
+.grid-item img {
+  max-width: 100%;
+  border-radius: 5px;
+  border: 3px white solid;
+  margin: 1px;
+}
+
+// /* clear fix */
 .grid:after {
   content: '';
   clear: both;
   display: block;
 }
 
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 51px; // accommodate the navbar
+  display: block;
+}
+
+.jumbotron {
+  background-color: lighten($jumbotron-bg, 5%);
+  border-radius: 5px !important;
+}
+
+.btn-section {
+  padding: 50px 0;
+}
+
+.navbar-default {
+  background-color: #e6673e;
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-nav > li {
+  color: white;
+}
+
+.footer-area {
+  height: 100px;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+  width: 100%;
+  background-color: #e6673e;
+  vertical-align: baseline;
+}
 
 //***************//
 //**** FORMS ****//
@@ -72,19 +129,6 @@ color:  lighten($brand-primary, 20%)
   @extend .btn-lg;
   }
 
-// apply styles to HTML elements
-// to make views framework-neutral
-main {
-  @extend .container;
-  padding-bottom: 80px;
-  width: 100%;
-  margin-top: 51px; // accommodate the navbar
-  }
-
-.jumbotron {
-  background-color: lighten($jumbotron-bg, 5%)
-}
-
 // Styles for form views
 // using Bootstrap
 .authform {
@@ -98,11 +142,11 @@ main {
   padding-bottom: 40px;
   height: auto;
   border-radius: 5px;
-
 }
 .authform .button {
   @extend .btn;
   @extend .btn-primary;
+  border-radius: 5px;
 }
 .authform fieldset {
   @extend .well;
@@ -118,8 +162,8 @@ main {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-sm;
+  border-radius: 5px;
 }
-
 
 // Form Edit form views
 // using Bootstrap
@@ -137,20 +181,17 @@ main {
 .editform .button {
   @extend .btn;
   @extend .btn-primary;
+  color: white;
+  border-radius: 5px;
 }
 .editform fieldset {
   @extend .well;
 }
-.editform h3,.editform p,.editform h2 {
-  padding-left: 40px;
+.editform p, {
+  padding-left: 25px;
 }
 .editform p {
   margin-bottom: -15px;
-}
-.editform .button {
-  @extend .btn;
-  @extend .btn-primary;
-  border-radius: 5px;
 }
 
 .button {

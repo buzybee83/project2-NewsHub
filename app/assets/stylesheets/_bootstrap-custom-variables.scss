@@ -13,7 +13,7 @@ $gray-dark:              lighten(#000, 20%) !default;   // #333
 $gray-light:             #4E5D6C !default;   // #999
 $gray-lighter:           #EBEBEB !default; // #eee
 
-$brand-primary:         #DF691A !default;
+$brand-primary:         #e6673e !default;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -28,7 +28,7 @@ $brand-danger:          #d9534f !default;
 $body-bg:               #2B3E50 !default;
 
 //** Global text color on `<body>`.
-$text-color:            $gray-lighter !default;
+$text-color:            $gray !default;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
@@ -172,7 +172,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    40px !default;
+$navbar-height:                    45px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
@@ -180,13 +180,13 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             $text-color !default;
-$navbar-default-bg:                #4E5D6C !default;
+$navbar-default-bg:                #e6673e !default;
 $navbar-default-border:            hsla(0, 100%, 100%, 0) !default;
 
 // Navbar links
 $navbar-default-link-color:                $text-color !default;
 $navbar-default-link-hover-color:          $navbar-default-link-color !default;
-$navbar-default-link-hover-bg:             darken($navbar-default-bg, 3%) !default;
+$navbar-default-link-hover-bg:             darken($navbar-default-bg, 7%) !default;
 $navbar-default-link-active-color:         $navbar-default-link-color !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 3%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
@@ -235,7 +235,7 @@ $table-border-color:            $navbar-default-bg !default;
 //
 //##
 
-$well-bg:                     $table-border-color !default;
+$well-bg:                     lighten($brand-primary, 25%) !default;
 $well-border:                 hsla(0, 100%, 100%, 0) !default;
 
 //== Tables
@@ -252,7 +252,7 @@ $table-bg:                      hsla(0, 100%, 100%, 0) !default;
 //** Background color used for `.table-striped`.
 $table-bg-accent:               $well-bg !default;
 //** Background color used for `.table-hover`.
-$table-bg-hover:                darken($well-bg, 3%) !default;
+$table-bg-hover:                darken($well-bg, 6%) !default;
 $table-bg-active:               $table-bg-hover !default;
 
 //== Type
@@ -288,7 +288,7 @@ $hr-border:                   $table-border-color !default;
 $btn-font-weight:                normal !default;
 
 $btn-default-color:              #fff !default;
-$btn-default-bg:                 $navbar-default-bg !default;
+$btn-default-bg:                 lighten($navbar-default-bg, 15%) !default;
 $btn-default-border:             hsla(0, 100%, 100%, 0) !default;
 
 $btn-primary-color:              #fff !default;
@@ -496,12 +496,12 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 
 $jumbotron-padding:              30px !default;
 $jumbotron-color:                inherit !default;
-$jumbotron-bg:                   $well-bg !default;
+$jumbotron-bg:                   rgba(230,103,62,0.5) !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 
 
-//== Form states and alerts
+//== a states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
 
