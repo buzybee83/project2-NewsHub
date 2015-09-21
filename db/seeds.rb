@@ -5,5 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Feed.delete_all
 
-feeds = Feed.create([{title: 'Tech Crunch', feed_url: 'http://www.techcrunch.com/feed/'},{title: 'The Verge', feed_url: 'http://www.theverge.com/rss/index.xml'}])
+feeds = Feed.create([{title: 'Tech Crunch', feed_url: 'http://www.techcrunch.com/feed/'},
+                     {title: 'The Verge', feed_url: 'http://www.theverge.com/rss/index.xml'},
+                     {title: 'Gizmodo', feed_url: 'http://gizmodo.com/rss'}])

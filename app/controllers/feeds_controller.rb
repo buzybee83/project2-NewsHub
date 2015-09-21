@@ -19,6 +19,8 @@ class FeedsController < ApplicationController
       @feed_items = FeedData.verge(data)
     when data.title == "TechCrunch"
       @feed_items = FeedData.tech_crunch(data)
+    when data.title == "Gizmodo"
+       @feed_items = FeedData.gizmodo(data)
     else
      "Sorry, the source is not available"
     end

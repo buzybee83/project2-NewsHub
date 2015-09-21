@@ -31,7 +31,7 @@ input[type="radio"], input[type="checkbox"] {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -63px;
+  margin: 0 auto 0;
 }
 main {
   @extend .container;
@@ -137,6 +137,9 @@ color:  darken($brand-primary, 20%)
 
  /**********************/
  /****** FOOTER ********/
+.push {
+  height: 15px;
+}
 .footer-area {
     height: 100px;
 }
