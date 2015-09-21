@@ -108,7 +108,7 @@ color:  darken($brand-primary, 20%)
 .grid-item {
   float: left;
   display: inline;
-  margin: auto 3px 4px 0;
+  margin: 2px 3px 4px 0;
   height: auto;
   width: 32.8%;
 }
@@ -126,6 +126,10 @@ color:  darken($brand-primary, 20%)
   border-radius: 5px;
   border: 3px white solid;
   margin: 1px;
+}
+.grid-item iframe {
+  max-width: 100%;
+  max-height: 290px;
 }
 
 // /* clear fix */

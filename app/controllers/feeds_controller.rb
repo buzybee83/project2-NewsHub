@@ -28,6 +28,18 @@ class FeedsController < ApplicationController
       unless is_correct_user?
          @feed_items = FeedData.gizmodo(data)
       end
+    when data.title == "Engadget RSS Feed"
+      unless is_correct_user?
+         @feed_items = FeedData.engadget(data)
+      end
+    when data.title == "9to5Mac"
+      unless is_correct_user?
+         @feed_items = FeedData.nineto5mac(data)
+      end
+    when data.title == "WIRED"
+      unless is_correct_user?
+         @feed_items = FeedData.wired(data)
+      end
     else
      "Sorry, the source is not available"
     end
@@ -62,7 +74,7 @@ class FeedsController < ApplicationController
   # PATCH/PUT /feeds/1.json
   def update
     respond_to do |format|
-      if @feed.update(feed_params)
+      if @feeds.update
         format.html { redirect_to @feed, notice: 'Feed was successfully updated.' }
         format.json { render :show, status: :ok, location: @feed }
       else

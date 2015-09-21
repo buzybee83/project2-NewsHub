@@ -9,4 +9,8 @@ Feed.delete_all
 
 feeds = Feed.create([{title: 'Tech Crunch', feed_url: 'http://www.techcrunch.com/feed/'},
                      {title: 'The Verge', feed_url: 'http://www.theverge.com/rss/index.xml'},
-                     {title: 'Gizmodo', feed_url: 'http://gizmodo.com/rss'}])
+                     {title: 'Gizmodo', feed_url: 'http://gizmodo.com/rss'},
+                     {title: 'Engadget', feed_url: 'http://www.engadget.com/rss-full.xml'},
+                     {title: '9to5Mac', feed_url: 'http://9to5mac.com/feed/'},
+                     {title: 'Wired', feed_url: 'http://www.wired.com/rss'}
+                     ])
