@@ -12,6 +12,16 @@ class FeedsController < ApplicationController
   # GET /feeds/1
   # GET /feeds/1.json
   def show
+    data = Feedjira::Feed.fetch_and_parse @feeds.feed_url
+    # switch to check for feed url/title
+    case
+    when data.title == "The Verge -  All Posts"
+      @feed_items = FeedData.verge(data)
+    when data.title == "Tech Crunch"
+      @feed_items = FeedData.tech_crunch(data)
+    else
+     "Sorry, the source is not available"
+    end
   end
 
   # GET /feeds/new

@@ -6,15 +6,14 @@
   <h1>Current Events</h1>
 </div>
 <div class="grid">
-  <% feed_title.each do |f| %>
+  <% @feed_items.each do |item| %>
     <div class="grid-item box-content">
-      <h3><%= f.title %></h3>
-      <p><%= f.published %></p>
-      <p><%= image_tag f.content.split[2].split('"')[1], width: "360px", height: "270px" %></p>
-      <p><%= f.content.gsub(/<img .*?>/, '').gsub("Continue reading", '').gsub(/&hellip;/, '').gsub(/<a style=.*?>/, '').html_safe %>
-      <%= link_to "Read More", f.url, class: 'btn btn-primary' %></p>
+      <h3><%= item.title %></h3>
+      <p> <%= item.pub %></p>
+      <p> <%= item.summary.gsub("Continue reading", '').gsub(/&hellip;/, '').gsub(/<a style=.*?>/, '').html_safe %></p>
+      <p><%= link_to "Read More", item.url, class: 'btn btn-primary' %></p>
     </div>
-    <% end %>
+   <% end %>
 </div>
 <div class="btn-section">
 <%= link_to feeds_path, class: 'btn btn-default' do %>
