@@ -17,7 +17,7 @@ class FeedsController < ApplicationController
     case
     when data.title == "The Verge -  All Posts"
       @feed_items = FeedData.verge(data)
-    when data.title == "Tech Crunch"
+    when data.title == "TechCrunch"
       @feed_items = FeedData.tech_crunch(data)
     else
      "Sorry, the source is not available"
