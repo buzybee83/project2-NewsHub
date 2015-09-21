@@ -1,5 +1,5 @@
 class FeedsController < ApplicationController
-  # before_action :verify_correct_user
+  # before_action :is_correct_user?
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
 
   # GET /feeds
@@ -13,14 +13,21 @@ class FeedsController < ApplicationController
   # GET /feeds/1.json
   def show
     data = Feedjira::Feed.fetch_and_parse @feeds.feed_url
+
     # switch to check for feed url/title
     case
     when data.title == "The Verge -  All Posts"
-      @feed_items = FeedData.verge(data)
+     unless is_correct_user?
+       @feed_items = FeedData.verge(data)
+     end
     when data.title == "TechCrunch"
-      @feed_items = FeedData.tech_crunch(data)
+      unless is_correct_user?
+        @feed_items = FeedData.tech_crunch(data)
+      end
     when data.title == "Gizmodo"
-       @feed_items = FeedData.gizmodo(data)
+      unless is_correct_user?
+         @feed_items = FeedData.gizmodo(data)
+      end
     else
      "Sorry, the source is not available"
     end
@@ -86,8 +93,8 @@ class FeedsController < ApplicationController
       params.require(:feed).permit(:title, :feed_url, :favicon_url)
     end
 
-    # def verify_correct_user
-    #   @feed = current_user.feeds.find_by(user_id: params[:id])
-    #   redirect_to feeds_path if @feed.nil?
-    # end
+    def is_correct_user?
+      @feed = current_user.feeds.find_by(id: params[:id])
+      redirect_to feeds_path, notice: "No source available" if @feed.nil?
+    end
 end
