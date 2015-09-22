@@ -26,8 +26,9 @@
   def self.engadget(data)
     # Parsing Engadget feed
     data.entries.map do |item|
+      image = item.image
       content = item.summary.gsub("Read more...", '').gsub(/&hellip;/, '')
-      FeedItem.new(item.title, item.published, item.image, content, item.url)
+      FeedItem.new(item.title, item.published, image, content, item.url)
     end
   end
 
