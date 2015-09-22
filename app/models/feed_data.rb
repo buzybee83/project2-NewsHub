@@ -23,14 +23,14 @@
     end
   end
 
-  def self.engadget(data)
-    # Parsing Engadget feed
-    data.entries.map do |item|
-      image = item.image
-      content = item.summary.gsub("Read more...", '').gsub(/&hellip;/, '')
-      FeedItem.new(item.title, item.published, image, content, item.url)
-    end
-  end
+  # def self.engadget(data)
+  #   # Parsing Engadget feed
+  #   data.entries.map do |item|
+  #     image = item.summary.gsub(/"scr=\'"/, '').split[3]
+  #     content = item.summary.gsub("Read more...", '').gsub(/<img src= .*?>/, '')
+  #     FeedItem.new(item.title, item.published, image, content, item.url)
+  #   end
+  # end
 
   def self.nineto5mac(data)
     # Parsing 9to5Mac feed
