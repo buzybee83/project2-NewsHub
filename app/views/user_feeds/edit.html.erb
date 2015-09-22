@@ -1,19 +1,27 @@
+<div class="page-header">
+  <h1>News Sources</h1>
+</div>
+
 <div class="authform">
   <%= form_for(@user, :url => edit_source_path, html: { class: "form-horizontal", role: "form" }) do |f| %>
     <div class="row">
+      <div class="row">
         <h3>Edit Sources</h3>
         <ul class="list-group">
           <%= f.collection_check_boxes(:feed_ids, @all_feeds, :id, :feed_name) do |b| %>
           <div class="col-md-6">
-          <li class="list-group-item">
-            <%= b.label(:"data-value" => b.value) { b.check_box + '  ' + b.text } %>
-          </li>
+            <li class="list-group-item">
+              <%= b.label(:"data-value" => b.value) { b.check_box + '  ' + b.text } %>
+            </li>
           </div>
           <% end %>
         </ul>
-      <div class="actions update">
-        <%= f.submit "Update", :class => "button" %>
-        <%= link_to "Back", :back %>
+      </div>
+      <div class="row">
+        <div class="actions update">
+          <%= f.submit "Update", :class => "button" %>
+          <%= link_to "Back", :back %>
+        </div>
       </div>
     </div>
   <% end %>
