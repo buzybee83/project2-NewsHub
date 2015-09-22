@@ -3,7 +3,7 @@
     <span class="glyphicon glyphicon-chevron-left"></span>
     Back
   <% end %>
-  <h1>Current Events</h1>
+  <h1><%= @feed %> &middot; Current Events</h1>
 </div>
 <div class="grid">
   <% @feed_items.each do |item| %>
