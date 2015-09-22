@@ -10,7 +10,7 @@
   def self.tech_crunch(data)
     # Parsing Tech Crunch feed
     data.entries.map do |item|
-      content = item.summary.gsub("Read More", '')
+      content = item.summary.gsub("Read More", '').gsub(/<img .*?>/, '')
       FeedItem.new(item.title, item.published, item.image, content, item.url)
     end
   end

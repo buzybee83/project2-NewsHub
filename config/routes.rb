@@ -2,9 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "users/registrations" }
   resources :users, only:[:show, :registrations]
-  resources :feeds
-  root to: 'static_pages#home'
-  match '/about', to: 'static_pages#about', via: 'get'
+  resources :feeds, only: [:show, :index]
+  root                        to: 'static_pages#home'
+  match '/about',             to: 'static_pages#about', via: 'get'
+  match '/edit-source', to: 'user_feeds#edit',  via: 'get'
+  match '/edit-source', to: "user_feeds#update",       via: 'put'
+  match '/edit-source', to: "user_feeds#update",       via: 'patch'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
