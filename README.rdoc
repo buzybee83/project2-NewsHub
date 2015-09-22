@@ -1,28 +1,24 @@
-== README
+# Project 2 - NEWSHUB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+A simple NewsHub App with Authentication.
 
-* Ruby version
+## Links
 
-* System dependencies
+* User stories: [Trello](https://trello.com/b/q34QjWDj/project-2-rails-app)
+* Production deployment: [Heroku](http://news-hub.herokuapp.com/)
 
-* Configuration
+## Technologies
 
-* Database creation
+* HTML5
+* SASS
+* Twitter Bootstrap
+* Bootstrap-generators
+* jQuery/CoffeScript
+* Ruby on Rails
+* PostgresQL
+* Devise
+* Feedjira
+* Masonry
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

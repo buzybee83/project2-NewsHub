@@ -157,15 +157,15 @@ color:  darken($brand-primary, 20%)
 
 //***************//
 //**** FORMS ****//
-.column {
-  @extend .col-md-6;
-  @extend .text-center;
-  }
+// .column {
+//   @extend .col-md-6;
+//   @extend .text-center;
+//   }
 .form {
   @extend .col-md-6;
   }
 .form-centered {
-  @extend .col-md-6;
+  @extend .col-md-8;
   @extend .text-center;
   }
 .submit {
@@ -177,14 +177,26 @@ color:  darken($brand-primary, 20%)
 // Styles for form views
 // using Bootstrap
 .authform {
-  padding-top: 30px;
-  max-width: 350px;
+  padding: 0 0 0 40px;
   margin: auto auto;
+  background-color: #f5c0af;
+  border-radius: 5px;
+  max-width: 850px;
+  min-height: auto;
 }
+.sign-in{
+  max-width: auto;
+  padding: 20px;
+  min-height: 230px;
+}
+.form-header {
+  padding-left: 140px;
+}
+
 .authform form {
   @extend .well;
   @extend .well-lg;
-  padding-bottom: 40px;
+  padding-bottom: 0;
   height: auto;
   border-radius: 5px;
 }
@@ -203,34 +215,9 @@ color:  darken($brand-primary, 20%)
 #error_explanation h2 {
   font-size: 16px;
 }
-
-// Form Edit form views
-// using Bootstrap
-.editform {
-  @extend .well;
-  padding-top: 30px;
-  max-width: 480px;
-  margin: auto auto;
-}
-.editform form {
-  padding: 40px;
-  height: auto;
-  border-radius: 5px;
-}
-.editform .button {
-  @extend .btn;
-  @extend .btn-primary;
-  color: white;
-  border-radius: 5px;
-}
-.editform fieldset {
-  @extend .well;
-}
-.editform p, {
-  padding-left: 25px;
-}
-.editform p {
-  margin-bottom: -15px;
+.actions {
+  padding-left: 20px;
+  padding-bottom:20px;
 }
 .button {
   @extend .btn-primary;
@@ -242,9 +229,12 @@ color:  darken($brand-primary, 20%)
 @media (max-width: 760px) {
   .button {
     border-radius: 5px;
-}
+  }
   .grid-item {
     min-width: 100%;
- }
+  }
+  .authform {
+    padding-left: 0;
+  }
 }
 
