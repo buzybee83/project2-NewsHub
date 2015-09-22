@@ -157,10 +157,6 @@ color:  darken($brand-primary, 20%)
 
 //***************//
 //**** FORMS ****//
-// .column {
-//   @extend .col-md-6;
-//   @extend .text-center;
-//   }
 .form {
   @extend .col-md-6;
   }
@@ -192,7 +188,12 @@ color:  darken($brand-primary, 20%)
 .form-header {
   padding-left: 140px;
 }
-
+.cancel {
+  padding-left: 25px;
+}
+.cancel .button {
+  margin-left: 0;
+}
 .authform form {
   @extend .well;
   @extend .well-lg;
@@ -216,7 +217,6 @@ color:  darken($brand-primary, 20%)
   font-size: 16px;
 }
 .actions {
-  padding-left: 20px;
   padding-bottom:20px;
 }
 .button {
