@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to edit_source_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Add Sources
+  <% end %>
+  <h1>My News Feeds</h1>
+</div>
+<div class="jumbotron">
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><h3>Source</h3></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @feeds) do |feed| %>
+        <tr>
+          <td> <%= link_to feed.title, feed %></td>
+        <tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+

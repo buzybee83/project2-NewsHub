@@ -1,0 +1,244 @@
+/************************/
+/***** Main Content *****/
+html, body {
+  height: 100%;
+}
+body {
+  padding-top: $navbar-height + 10px;
+  background-image: url("white_speckled_body.jpg");
+  background-size: 100%;
+}
+.page-header {
+  a.btn {
+    float: right;
+  }
+
+  a.btn + a.btn {
+    margin-right: 8px;
+  }
+}
+input[type="radio"], input[type="checkbox"] {
+  width: initial;
+  height: initial;
+  margin-top: 5px;
+  margin-right: 2px;
+}
+.main-container, .footer-area {
+  font-family: 'Paprika', serif;
+  text: #424242;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto 0;
+}
+main {
+  @extend .container;
+  margin-top: 51px; // accommodate the navbar
+  display: block;
+  max-width: 1800px;
+  margin-bottom: 0;
+}
+h1, h2, h3, {
+  font-family: 'Bangers', serif;
+}
+
+.jumbotron {
+  background-color: lighten($jumbotron-bg, 5%);
+  border-radius: 5px !important;
+}
+
+.btn-section {
+  padding: 50px 0;
+  margin-bottom: 30px;
+}
+
+/********************/
+/****** Navbar ******/
+.navbar-default {
+  font-family: 'Paprika', serif;
+  background-color: #e6673e;
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-nav > li {
+  color: white;
+}
+
+/********************/
+/** Table styling **/
+.table {
+  max-width: 400px;
+  font-size: 1.2em;
+}
+.table a:hover {
+  color: #e6673e;
+  text-decoration: none;
+}
+
+/********************/
+/***** Articles *****/
+
+.grid-item h3 {
+  color: #e6673e;
+}
+
+a:hover {
+color:  darken($brand-primary, 20%)
+}
+
+.btn-primary, .btn-default {
+  border-radius: 5px;
+}
+
+/*******************/
+/*** Grid System ***/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.grid-item {
+  float: left;
+  display: inline;
+  margin: 2px 3px 4px 0;
+  height: auto;
+  width: 32.8%;
+}
+
+.box-content {
+  padding: 0 20px 10px 20px;
+  background: rgba(225,225,225,0.5);
+  border-radius: 5px;
+  border: 1px lightgray solid;
+}
+
+.grid-item img {
+  max-width: 100%;
+  max-height: 260px;
+  border-radius: 5px;
+  border: 3px white solid;
+  margin: 1px;
+}
+.grid-item iframe {
+  max-width: 100%;
+  max-height: 290px;
+}
+
+// /* clear fix */
+.grid:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+ /**********************/
+ /****** FOOTER ********/
+.push {
+  height: 15px;
+}
+.footer-area {
+    height: 100px;
+}
+.footer-area {
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 0;
+  width: 100%;
+  background-color: #e6673e;
+ }
+
+//***************//
+//**** FORMS ****//
+.form {
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-8;
+  @extend .text-center;
+  }
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
+.push-col {
+  height: 25px;
+}
+
+// Styles for form views
+// using Bootstrap
+.authform {
+  padding: 0 0 0 40px;
+  margin: auto auto;
+  background-color: #f5c0af;
+  border-radius: 5px;
+  max-width: 850px;
+  min-height: auto;
+}
+.sign-in{
+  max-width: auto;
+  padding: 20px;
+  min-height: 230px;
+}
+.form-header {
+  padding-left: 140px;
+}
+.cancel {
+  padding-left: 25px;
+}
+.cancel .button {
+  margin-left: 0;
+}
+.authform form {
+  @extend .well;
+  @extend .well-lg;
+  padding-bottom: 0;
+  height: auto;
+  border-radius: 5px;
+}
+.authform .button {
+  @extend .btn;
+  @extend .btn-primary;
+  border-radius: 5px;
+}
+.authform fieldset {
+  @extend .well;
+}
+#error_explanation:not(:empty) {
+  @extend .alert;
+  @extend .alert-danger;
+}
+#error_explanation h2 {
+  font-size: 16px;
+}
+.actions {
+  padding-top: 20px;
+  padding-bottom:20px;
+}
+.button {
+  @extend .btn-primary;
+}
+
+
+/**************************/
+/****** Resposive *********/
+@media (max-width: 760px) {
+  .button {
+    border-radius: 5px;
+  }
+  .grid-item {
+    min-width: 100%;
+  }
+  .authform {
+    padding-left: 0;
+  }
+}
+
