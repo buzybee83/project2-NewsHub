@@ -4,9 +4,9 @@ html, body {
   height: 100%;
 }
 body {
-  padding-top: $navbar-height + 10px;
+  padding-top: $navbar-height;
   background-image: url("white_speckled_body.jpg");
-  background-size: 100%;
+  background-size: cover;
 }
 .page-header {
   a.btn {
@@ -83,6 +83,27 @@ h1, h2, h3, {
   text-decoration: none;
 }
 
+.source {
+  font-size: 1.3em;
+  width: 90%;
+}
+
+.btn-info {
+  background-color: white;
+  width: 100%;
+  color: #e6673e;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.btn-info a:hover {
+  text-decoration: none;
+  color: white; 
+}
+.btn-info:hover {
+  background-color: #E87651;
+  color: white;
+}
+
 /********************/
 /***** Articles *****/
 
@@ -127,10 +148,6 @@ color:  darken($brand-primary, 20%)
   border: 3px white solid;
   margin: 1px;
 }
-.grid-item iframe {
-  max-width: 100%;
-  max-height: 290px;
-}
 
 // /* clear fix */
 .grid:after {
@@ -141,9 +158,6 @@ color:  darken($brand-primary, 20%)
 
  /**********************/
  /****** FOOTER ********/
-.push {
-  height: 15px;
-}
 .footer-area {
     height: 100px;
 }
@@ -176,11 +190,11 @@ color:  darken($brand-primary, 20%)
 // Styles for form views
 // using Bootstrap
 .authform {
-  padding: 0 0 0 40px;
+  padding: 0 30px 0 20px;
   margin: auto auto;
   background-color: #f5c0af;
   border-radius: 5px;
-  max-width: 850px;
+  max-width: 1150px;
   min-height: auto;
 }
 .sign-in{
@@ -190,6 +204,9 @@ color:  darken($brand-primary, 20%)
 }
 .form-header {
   padding-left: 140px;
+}
+.signup-sources {
+  padding-left: 30px;
 }
 .cancel {
   padding-left: 25px;
@@ -220,16 +237,25 @@ color:  darken($brand-primary, 20%)
   font-size: 16px;
 }
 .actions {
-  padding-top: 20px;
-  padding-bottom:20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.signup {
+  margin-left: 63%;
 }
 .button {
   @extend .btn-primary;
+  width: 200px;
 }
 
+/** checkboxes **/
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+}
 
 /**************************/
-/****** Resposive *********/
+/****** Responsive *********/
 @media (max-width: 760px) {
   .button {
     border-radius: 5px;

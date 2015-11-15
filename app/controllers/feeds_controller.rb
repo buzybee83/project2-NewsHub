@@ -28,6 +28,10 @@ class FeedsController < ApplicationController
       unless is_correct_user?
          @feed_items = FeedData.gizmodo(data)
       end
+    when data.title == "Lifehacker"
+      unless is_correct_user?
+         @feed_items = FeedData.lifehacker(data)
+      end
     when data.title == "Engadget RSS Feed"
       unless is_correct_user?
          @feed_items = FeedData.engadget(data)
@@ -37,6 +41,10 @@ class FeedsController < ApplicationController
          @feed_items = FeedData.nineto5mac(data)
       end
     when data.title == "WIRED"
+      unless is_correct_user?
+         @feed_items = FeedData.wired(data)
+      end
+    when data.title == "Re/code"
       unless is_correct_user?
          @feed_items = FeedData.wired(data)
       end

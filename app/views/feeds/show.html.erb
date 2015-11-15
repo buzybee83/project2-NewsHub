@@ -10,14 +10,14 @@
     <div class="grid-item box-content">
       <h3><%= item.title %></h3>
       <p> <%= item.pub %></p>
-      <p> <%= image_tag item.image %></p>
+      <p> <%= image_tag item.image, target: "_blank" %></p>
       <p> <%= item.summary.html_safe %></p>
-      <p><%= link_to "Read More", item.url, class: 'btn btn-primary' %></p>
+      <p><%= link_to "Read More", item.url, target: "_blank", class: 'btn btn-primary' %></p>
     </div>
    <% end %>
 </div>
 <div class="btn-section">
-<%= link_to feeds_path, class: 'btn btn-default' do %>
+<%= link_to feeds_path, class: 'btn btn-default pull-right' do %>
   <span class="glyphicon glyphicon-chevron-left"></span>
   Back
 <% end %>

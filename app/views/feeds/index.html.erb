@@ -6,21 +6,17 @@
   <h1>My News Feeds</h1>
 </div>
 <div class="jumbotron">
-<div class="table-responsive">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th><h3>Source</h3></th>
-      </tr>
-    </thead>
-
-    <tbody>
+  <h3>Source(s)</h3>
+  Select from the list to get the current events.
+  <br><br>
+  <div class="row source">
+    <div class="list-group">
       <%= content_tag_for(:tr, @feeds) do |feed| %>
-        <tr>
-          <td> <%= link_to feed.title, feed %></td>
-        <tr>
+        <div class="col-sm-3">
+          <%= link_to feed.title, feed, class: "btn btn-info" %>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+  </div>
 </div>
 

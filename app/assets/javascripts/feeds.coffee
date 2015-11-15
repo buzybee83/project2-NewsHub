@@ -2,8 +2,17 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+#$(document).ready ->
+#  $('.grid').masonry
+#    itemSelector: '.grid-item'
+#    columnWidth: 2
+#  return
+
 $(document).ready ->
-  $('.grid').masonry
-    itemSelector: '.grid-item'
-    columnWidth: 2
-  return
+  setInterval (->
+    $('.grid').masonry
+      itemSelector: '.grid-item'
+      columnWidth: 2
+    return
+  ), 3000
+return
