@@ -408,16 +408,19 @@ $zindex-modal:             1050 !default;
 
 // Small screen / tablet
 $container-tablet:             ((750px + $grid-gutter-width)) !default;
+
 //** For `@screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
 $container-desktop:            ((1060px + $grid-gutter-width)) !default;
+
 //** For `@screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
 $container-large-desktop:      ((1380px + $grid-gutter-width)) !default;
+
 //** For `@screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 

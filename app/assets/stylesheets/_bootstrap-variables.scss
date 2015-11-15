@@ -338,16 +338,19 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 // Small screen / tablet
 $container-tablet:             (740px + $grid-gutter-width) !default;
+
 //** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
 $container-desktop:            (1100px + $grid-gutter-width) !default;
+
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
 $container-large-desktop:      (1240px + $grid-gutter-width) !default;
+
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
