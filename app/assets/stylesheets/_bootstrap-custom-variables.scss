@@ -407,17 +407,17 @@ $zindex-modal:             1050 !default;
 //## Define the maximum width of `.container` for different screen sizes.
 
 // Small screen / tablet
-$container-tablet:             ((750px + $grid-gutter-width)) !default;
+$container-tablet:             ((740px + $grid-gutter-width)) !default;
 //** For `@screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
-$container-desktop:            ((1060px + $grid-gutter-width)) !default;
+$container-desktop:            ((1020px + $grid-gutter-width)) !default;
 //** For `@screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      ((1380px + $grid-gutter-width)) !default;
+$container-large-desktop:      ((1300px + $grid-gutter-width)) !default;
 //** For `@screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
