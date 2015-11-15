@@ -23,13 +23,11 @@
       <header>
         <%= render 'layouts/navigation' %>
       </header>
-        <main role="main" class="container main-container">
-          <%= render 'layouts/messages' %>
-          <%= yield %>
-        </main>
-        <div class="push"><!-- footer push --></div>
-      </div>
-    <div class="push"></div>
+      <main role="main" class="container main-container">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </main>
+    </div>
     <footer class="footer">
         <%= render 'layouts/footer' %>
     </footer>
