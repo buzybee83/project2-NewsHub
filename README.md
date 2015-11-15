@@ -17,7 +17,11 @@ A simple NewsHub App with Authentication.
 * Bootstrap-generators
 * jQuery/CoffeScript
 * Ruby on Rails
+<<<<<<< HEAD
 * PostgreSQL
+=======
+* PostgresQL
+>>>>>>> 97feea49f9664960395c9221de89bb3adc35a322
 * Devise
 * Feedjira
 * Masonry
