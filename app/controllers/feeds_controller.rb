@@ -46,7 +46,19 @@ class FeedsController < ApplicationController
       end
     when data.title == "Re/code"
       unless is_correct_user?
-         @feed_items = FeedData.wired(data)
+         @feed_items = FeedData.recode(data)
+      end
+    when data.title == "ScienceAlert - Latest"
+      unless is_correct_user?
+         @feed_items = FeedData.science_alert(data)
+      end
+    when data.title == "TechNewsWorld"
+      unless is_correct_user?
+         @feed_items = FeedData.tech_news_world(data)
+      end
+    when data.title == "UrbanGeekz"
+      unless is_correct_user?
+         @feed_items = FeedData.urban_geekz(data)
       end
     else
      "Sorry, the source is not available"
