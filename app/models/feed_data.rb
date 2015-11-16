@@ -2,7 +2,7 @@
   def self.verge(data)
     # Parsing The Verge feed
     data.entries.map do |item|
-      content = item.content.gsub("Continue reading", '').gsub(/&hellip;/, '').gsub(/<a style=.*?>/, '')
+      content = item.content.gsub("Continue reading", '').gsub(/&hellip;/, '').gsub(/<a style=.*?>/, '').gsub(/<img .*?>/, '')
       FeedItem.new(item.title, item.published, item.image, content, item.url)
     end
   end
@@ -18,7 +18,7 @@
   def self.gizmodo(data)
     # Parsing Gizmodo feed
     data.entries.map do |item|
-      content = item.summary.gsub("Read more...", '').gsub(/&hellip;/, '')
+      content = item.summary.gsub("Read more...", '').gsub(/&hellip;/, '').gsub(/<img .*?>/, '')
       FeedItem.new(item.title, item.published, item.image, content, item.url)
     end
   end
@@ -26,7 +26,7 @@
   def self.lifehacker(data)
     # Parsing Lifehacker feed
     data.entries.map do |item|
-      content = item.summary.gsub("Read more...", '').gsub(/&hellip;/, '')
+      content = item.summary.gsub("Read more...", '').gsub(/&hellip;/, '').gsub(/<img .*?>/, '')
       FeedItem.new(item.title, item.published, item.image, content, item.url)
     end
   end
@@ -45,7 +45,7 @@
     # Parsing 9to5Mac feed
     data.entries.map do |item|
       image = item.image.gsub("?w=155", "")
-      content = item.summary
+      content = item.summary.gsub(/<img .*?>/, '')
       FeedItem.new(item.title, item.published, image, content, item.url)
     end
   end
@@ -70,7 +70,7 @@
   def self.science_alert(data)
     # Parsing ScienceAlert feed
     data.entries.map do |item|
-      content = item.summary
+      content = item.summary.gsub(/<img .*?>/, '')
       FeedItem.new(item.title, item.published, item.image, content, item.url)
     end
   end
