@@ -66,4 +66,32 @@
       FeedItem.new(item.title, item.published, image, content, item.url)
     end
   end
+
+  def self.science_alert(data)
+    # Parsing ScienceAlert feed
+    data.entries.map do |item|
+      content = item.summary
+      FeedItem.new(item.title, item.published, item.image, content, item.url)
+    end
+  end
+
+  def self.tech_news_world(data)
+    # Parsing TechNewsWorld feed
+    data.entries.map do |item|
+      image_new = item.content.to_s
+      image = image_new[/img.*?src="(.*?)"/i,1]
+      content = item.summary
+      FeedItem.new(item.title, item.published, image, content, item.url)
+    end
+  end
+
+  def self.urban_geekz(data)
+    # Parsing UrbanGeekz feed
+    data.entries.map do |item|
+      image_new = item.content.to_s
+      image = image_new[/img.*?src="(.*?)"/i,1]
+      content = item.summary
+      FeedItem.new(item.title, item.published, image, content, item.url)
+    end
+  end
 end

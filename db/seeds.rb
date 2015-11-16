@@ -14,5 +14,8 @@ feeds = Feed.create([{title: 'Tech Crunch', feed_url: 'http://www.techcrunch.com
                      {title: 'Wired', feed_url: 'http://www.wired.com/rss'},
                      {title: 'Engadget', feed_url: 'http://www.engadget.com/rss-full.xml'},
                      {title: 'Lifehacker', feed_url: 'http://lifehacker.com/rss'},
-                     {title: 'Re/code', feed_url: 'http://recode.net/feed/'}                                          
+                     {title: 'Re/code', feed_url: 'http://recode.net/feed/'},                                         
+                     {title: 'ScienceAlert', feed_url: 'http://feeds.feedburner.com/sciencealert-latestnews?format=xml'},
+                     {title: 'TechNewsWorld', feed_url: 'http://www.technewsworld.com/perl/syndication/rssfull.pl'},
+                     {title: 'UrbanGeekz', feed_url: 'http://urbangeekz.com/feed/'}
                      ])
