@@ -53,8 +53,9 @@
   def self.wired(data)
     # Parsing Wired feed
     data.entries.map do |item|
-      content = item.summary.gsub("Read more...", '').gsub(/&hellip;/, '')
-      FeedItem.new(item.title, item.published, item.image, content, item.url)
+      image = ''
+      content = item.summary.gsub("Read more...", '').gsub(/&hellip;/, '').gsub(/<br\s*\/?>/,'')
+      FeedItem.new(item.title, item.published, image, content, item.url)
     end
   end
 
