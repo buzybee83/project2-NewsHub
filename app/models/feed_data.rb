@@ -27,7 +27,7 @@
     # Parsing Lifehacker feed
     data.entries.map do |item|
       content = item.summary.gsub("Read more...", '').gsub(/&hellip;/, '')
-      FeedItem.new(item.title, item.published, image, content, item.url)
+      FeedItem.new(item.title, item.published, item.image, content, item.url)
     end
   end
 
